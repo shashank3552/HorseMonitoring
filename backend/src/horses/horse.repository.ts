@@ -1,6 +1,6 @@
 import { Horse } from './horse.entity';
 import { EntityRepository, Repository } from 'typeorm';
-import { CreateHorseDto } from './dto/create-task.dto';
+import { CreateHorseDto } from './dto/create-horse.dto';
 
 @EntityRepository(Horse)
 export class HorseRepository extends Repository<Horse> {
@@ -32,16 +32,6 @@ export class HorseRepository extends Repository<Horse> {
     .set(createHorseDto)
     .where("id = :id", { id: id })
     .execute();
-    // const { name, dob, dueDate, sex, isPregnant } = createHorseDto;
-
-    // const horse = new Horse();
-    // horse.name = name;
-    // horse.dob = dob;
-    // horse.dueDate = dueDate;
-    // horse.sex = sex;
-    // horse.isPregnant = isPregnant;
-    // await horse.save();
-
     return a;
   }
 }

@@ -1,5 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
-import { CreateHorseDto } from './dto/create-task.dto';
+import { CreateHorseDto } from './dto/create-horse.dto';
 import { HorseRepository } from './horse.repository';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Horse } from './horse.entity';
@@ -40,11 +40,6 @@ export class HorseService {
 
   async updateHorse(id: number, updateHorseDto: any): Promise<any> {
     return await this.horseRepository.updateHorse(id, updateHorseDto);
-    // let dt = await this.getHorseById(id);
-    // dt = updateHorseDto;
-    // console.log(dt)
-    // await dt.save();
-    // return dt;
   }
 
 

@@ -1,7 +1,6 @@
 import { Controller, Get, Post, Body,Put, Param, Delete, Patch, Query, UsePipes, ValidationPipe, ParseIntPipe } from '@nestjs/common';
 import { HorseService } from './horse.service';
-import { CreateHorseDto } from './dto/create-task.dto';
-import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
+import { CreateHorseDto } from './dto/create-horse.dto';
 import { Horse } from './horse.entity';
 
 @Controller('horses')
